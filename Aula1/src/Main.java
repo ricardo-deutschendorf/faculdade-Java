@@ -62,7 +62,22 @@ public class Main {
             System.out.println(i);
         }
 
+        int[][] matSoma = new int[10][12];
+        int a, b;
+        int soma = 0;
 
+        System.out.println("Digite o valor inicial:");
+        int valor = scanner.nextInt();
+
+        for (a = 0; a < matSoma.length; a++) {
+            for (b = 0; b < matSoma[a].length; b++) {
+                matSoma[a][b] = valor;
+                soma += valor;
+                valor++; // próximo número da sequência
+            }
+        }
+
+        System.out.println("Resultado da soma: " + soma);
         scanner.close();
     }
 }
